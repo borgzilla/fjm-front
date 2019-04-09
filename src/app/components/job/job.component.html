@@ -1,0 +1,23 @@
+<div>
+  <h3>Job</h3>
+</div>
+<div class="row">
+  <div class="rounded" style="background-color:lightsteelblue">
+
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>URI</th>
+        <th>State</th>
+      </tr>
+
+      <tr *ngFor="let job of jobs">
+        <td>{{ job.ID }}</td>
+        <td>{{ job.name }}</td>
+        <td><a routerLink="/detail/{{job.ID}}">{{ job.URI }}</a></td>
+        <td>{{ job.state }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
